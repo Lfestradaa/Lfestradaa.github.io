@@ -339,3 +339,172 @@ footer {
         font-size: 29px;
     }
 }
+
+/* =================================
+   11. PÁGINAS INDIVIDUALES
+================================= */
+
+.project-hero {
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 75px 24px;
+}
+
+.project-detail-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.project-hero h1 {
+    max-width: 800px;
+    font-size: clamp(34px, 5vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.project-hero p:not(.eyebrow) {
+    max-width: 720px;
+    color: #B8CCDA;
+    font-size: 17px;
+    margin-bottom: 24px;
+}
+
+.project-back {
+    color: #A8C5D8;
+    font-size: 14px;
+}
+
+.project-section {
+    padding-top: 65px;
+    padding-bottom: 85px;
+}
+
+.project-section h2 {
+    color: var(--navy);
+    font-size: 27px;
+    margin-top: 45px;
+    margin-bottom: 18px;
+}
+
+.project-section > h2:first-child {
+    margin-top: 0;
+}
+
+.project-section > p {
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.project-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.project-info-card {
+    padding: 24px;
+    background: var(--light-gray);
+    border-radius: 8px;
+}
+
+.project-info-card h3 {
+    color: var(--navy);
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.project-info-card p {
+    color: var(--muted);
+}
+
+.project-stages,
+.project-conclusions {
+    padding-left: 24px;
+    color: var(--muted);
+}
+
+.project-stages li,
+.project-conclusions li {
+    padding-left: 8px;
+    margin-bottom: 14px;
+}
+
+.project-stages strong {
+    color: var(--graphite);
+}
+
+.project-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.metric-card {
+    padding: 28px 18px;
+    text-align: center;
+    background: var(--light-gray);
+    border-radius: 8px;
+}
+
+.metric-card span {
+    display: block;
+    color: var(--navy);
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.metric-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.project-note {
+    font-size: 13px;
+    font-style: italic;
+}
+
+.project-dashboard {
+    margin-top: 25px;
+}
+
+.project-dashboard img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #E5E7EB;
+}
+
+.project-dashboard figcaption {
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.project-deliverables {
+    margin-top: 25px;
+}
+
+/* Adaptación para móviles */
+
+@media (max-width: 768px) {
+
+    .project-info-grid,
+    .project-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .project-hero {
+        padding: 60px 24px;
+    }
+
+    .project-section h2 {
+        font-size: 24px;
+    }
+
+    .metric-card span {
+        font-size: 26px;
+    }
+}
