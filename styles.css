@@ -1,0 +1,341 @@
+
+/* =================================
+   1. CONFIGURACIÓN GENERAL
+================================= */
+
+:root {
+    --navy: #17324D;
+    --steel-blue: #477B9C;
+    --light-gray: #F4F6F8;
+    --white: #FFFFFF;
+    --graphite: #263238;
+    --muted: #64748B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--graphite);
+    background-color: var(--white);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =================================
+   2. NAVEGACIÓN
+================================= */
+
+header {
+    width: 100%;
+    background-color: var(--white);
+    border-bottom: 1px solid #E5E7EB;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1120px;
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--navy);
+}
+
+.logo span {
+    color: var(--steel-blue);
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 14px;
+    color: var(--graphite);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--steel-blue);
+}
+
+/* =================================
+   3. PRESENTACIÓN PRINCIPAL
+================================= */
+
+.hero {
+    min-height: 590px;
+    display: flex;
+    align-items: center;
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 90px 24px;
+}
+
+.hero-content {
+    max-width: 1120px;
+    width: 100%;
+    margin: auto;
+}
+
+.eyebrow {
+    color: var(--steel-blue);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.hero .eyebrow {
+    color: #A8C5D8;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 64px);
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.hero h2 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #B8CCDA;
+    margin-bottom: 24px;
+}
+
+.hero-description {
+    max-width: 620px;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.hero-note {
+    color: #B8CCDA;
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--steel-blue);
+    color: var(--white);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #35627F;
+}
+
+/* =================================
+   4. SECCIONES GENERALES
+================================= */
+
+.section {
+    max-width: 1120px;
+    margin: auto;
+    padding: 85px 24px;
+}
+
+.section-light {
+    max-width: none;
+    background-color: var(--light-gray);
+    padding: 85px max(24px, calc((100% - 1072px) / 2));
+}
+
+.section-heading {
+    margin-bottom: 38px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+}
+
+/* =================================
+   5. ACERCA DE MÍ
+================================= */
+
+.about-content {
+    max-width: 850px;
+    font-size: 18px;
+    color: var(--muted);
+}
+
+/* =================================
+   6. HABILIDADES
+================================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.skill-card {
+    background-color: var(--white);
+    padding: 30px;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+}
+
+.skill-card h3 {
+    color: var(--navy);
+    font-size: 19px;
+    margin-bottom: 16px;
+}
+
+.skill-card p {
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+/* =================================
+   7. PROYECTOS
+================================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.project-card {
+    padding: 32px;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(23, 50, 77, 0.08);
+}
+
+.project-number {
+    color: var(--steel-blue);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.project-card h3 {
+    color: var(--navy);
+    font-size: 21px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+.project-card p {
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.project-tools {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.project-link {
+    display: inline-block;
+    color: var(--steel-blue);
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.project-link:hover {
+    color: var(--navy);
+}
+
+/* =================================
+   8. CONTACTO
+================================= */
+
+#contacto .section-heading {
+    text-align: center;
+}
+
+#contacto .section-heading > p {
+    margin-bottom: 24px;
+}
+
+/* =================================
+   9. PIE DE PÁGINA
+================================= */
+
+footer {
+    background-color: var(--navy);
+    color: #B8CCDA;
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+}
+
+/* =================================
+   10. DISEÑO RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 70px 24px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section,
+    .section-light {
+        padding: 65px 24px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+}
