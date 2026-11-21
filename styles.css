@@ -508,3 +508,49 @@ footer {
         font-size: 26px;
     }
 }
+
+/* Presentación con foto de perfil */
+.hero-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 340px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 768px) {
+    .hero-layout {
+        flex-direction: column-reverse;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .hero-image {
+        flex-basis: auto;
+    }
+
+    .hero-image img {
+        width: 210px;
+        height: 250px;
+    }
+}
